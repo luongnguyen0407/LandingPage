@@ -1,0 +1,92 @@
+.header {
+  // background-color: black;
+  background-image: url(../img/Bg-hero.png);
+  display: block;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 0 40px;
+    &-item {
+      a {
+        color: $color-wh;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+  &-btn {
+    .btn-register {
+      @include btn($roud: 40px, $bg: $color-wh);
+      padding: 12px 28px;
+      color: $color-bl;
+    }
+    .btn-login {
+      @include btn($roud: 40px, $bg: transparent);
+      color: $color-wh;
+      padding: 12px 20px;
+    }
+    .bar {
+      color: white;
+      font-size: 20px;
+      margin-left: 20px;
+      display: none;
+    }
+  }
+  @include maxw(1280px) {
+    .cl {
+      max-width: 1120px;
+    }
+  }
+  @include maxw(1025px) {
+    .cl {
+      max-width: 900px;
+    }
+    .menu {
+      gap: 0 20px;
+      & a {
+        font-size: 16px;
+      }
+    }
+  }
+  @include maxw(768px) {
+    .bar {
+      display: inline;
+    }
+    .btn-register {
+      padding: 10px 25px;
+    }
+    .menu {
+      display: block;
+      position: absolute;
+      background-color: black;
+      left: 0;
+      width: 40%;
+      padding: 20px;
+      top: 0;
+      height: 100vh;
+      line-height: 3;
+      transform: translateX(-100%);
+    }
+  }
+  .fixed {
+    position: fixed;
+    transform: translateX(0);
+    transition: all 0.3s linear;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 1000;
+  }
+  @include maxw(401px) {
+    .btn-register,
+    .btn-login {
+      display: none;
+    }
+  }
+}

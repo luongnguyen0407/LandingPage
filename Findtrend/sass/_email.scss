@@ -1,0 +1,32 @@
+.email {
+  background-color: $main-color;
+  padding: 140px 0;
+  display: block;
+  &-wrapper {
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+    :first-child {
+      font-size: 50px;
+      font-weight: 900;
+    }
+    :nth-child(2) {
+      font-size: 50px;
+      color: #87d322;
+      font-weight: 900;
+    }
+    .btn-end {
+      @include btn($roud: 40px, $bg: $color-bl);
+      padding: 13px 32px;
+      margin-top: 40px;
+    }
+  }
+  @include maxw(480px) {
+    &-wrapper {
+      :first-child,
+      :nth-child(2) {
+        font-size: 36px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.longtext {
+  display: block;
+  max-width: 1060px;
+  margin: 140px auto;
+  width: 100%;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 76px;
+  text-align: center;
+  & span {
+    color: #adadad;
+  }
+  @include maxw(769px) {
+    margin-top: 80px;
+  }
+  @include maxw(480px) {
+    font-size: 30px;
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,82 @@
+.connect {
+  display: block;
+  &-wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  &-headding {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  &-cl {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  &-platform {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+    gap: 24px;
+    overflow: auto;
+    & img {
+      padding: 32px;
+      cursor: pointer;
+      transition: background 0.25s linear;
+      &:hover {
+        background-color: $main-color;
+        border: 2px;
+      }
+    }
+  }
+  &-twiter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    & img {
+      width: 100%;
+      max-width: 800px;
+    }
+  }
+  &-btn {
+    text-align: center;
+  }
+  &-link {
+    @include btn($roud: 40px, $bg: $color-bl);
+    padding: 16px 32px;
+    display: inline-block;
+    margin-top: 80px;
+    margin-bottom: 140px;
+    margin: 80px 0 140px 0;
+  }
+  @include maxw(1280px) {
+    &-wrapper {
+      max-width: 1120px;
+    }
+  }
+  @include maxw(768px) {
+    .connect-platform {
+      overflow: hidden;
+      overflow-x: visible;
+      gap: 0;
+      & img {
+        padding: 15px;
+      }
+    }
+  }
+  @include maxw(480px) {
+    .connect-platform {
+      overflow: hidden;
+      overflow-x: visible;
+      gap: 0;
+      & img {
+        padding: 15px;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+}

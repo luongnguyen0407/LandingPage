@@ -1,0 +1,38 @@
+.partner {
+  display: block;
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+  &-headding {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700px;
+  }
+  .wrap-brands {
+    margin-top: 80px;
+    margin-bottom: 140px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+@include maxw(1280px) {
+  .partner {
+    max-width: 1120px;
+  }
+}
+@include maxw(769px) {
+  .wrap-brands {
+    grid-template-columns: repeat(3, 1fr) !important;
+    margin: 0 10px;
+  }
+}
+@include maxw(480px) {
+  .partner-headding {
+    font-size: 36px;
+    padding: 10px;
+  }
+  .wrap-brands {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

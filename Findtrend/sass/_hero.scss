@@ -1,0 +1,144 @@
+.hero {
+  padding: 100px 0;
+  background-image: url(../img/Bg-hero.png);
+  display: block;
+  &-socmed {
+    max-width: 1076px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 95px;
+  }
+  &-content-wrapper {
+    max-width: 800px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &-title {
+    color: $color-wh;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 150%;
+  }
+  & p {
+    color: #8b8b8b;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 24px 0 40px 0;
+  }
+  &-btn-wrapper {
+    position: relative;
+  }
+  &-btn-img {
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    transform: translate(-50%, -50%);
+  }
+  &-btn-link {
+    @include btn($roud: 40px);
+    color: $color-bl;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .socmed-item {
+    padding: 0 10px;
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: relative;
+    gap: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #181818;
+    &1 {
+      transform: translateX(20%) rotate(-4deg);
+      bottom: 0;
+      z-index: 4;
+    }
+    &2 {
+      transform: translate(-10%, 60%) rotate(2deg);
+      z-index: 3;
+    }
+    &3 {
+      transform: translate(-20%, -20%) rotate(-2deg);
+      z-index: 2;
+    }
+    &4 {
+      transform: translate(-30%, 60%) rotate(4deg);
+      z-index: 1;
+    }
+
+    & img {
+      flex-shrink: 0;
+      object-fit: cover;
+      width: 31px;
+      height: 31px;
+    }
+    & span {
+      overflow: hidden;
+
+      color: $color-wh;
+      font-size: 16px;
+      white-space: nowrap;
+      font-weight: 400;
+    }
+    .xmark {
+      color: white;
+      padding-left: 50px;
+      position: absolute;
+      border-radius: 5px;
+      right: 10px;
+      font-size: 23px;
+      border-radius: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(
+        270deg,
+        #181818 53.65%,
+        rgba(24, 24, 24, 0.8) 100%
+      );
+    }
+  }
+}
+@include maxw(769px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .hero-btn-img {
+    display: none;
+  }
+  .hero-socmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .socmed-item {
+    margin-top: 10px;
+  }
+  .socmed-item1 {
+    transform: translate(0) rotate(-4deg) !important;
+  }
+  .socmed-item2 {
+    transform: translate(0) rotate(2deg) !important;
+  }
+  .socmed-item3 {
+    transform: translate(0) rotate(-2deg) !important;
+  }
+  .socmed-item4 {
+    transform: translate(0) rotate(4deg) !important;
+  }
+}
+@include maxw(480px) {
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}

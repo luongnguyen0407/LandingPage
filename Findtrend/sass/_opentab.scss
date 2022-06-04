@@ -1,0 +1,68 @@
+.opentab {
+  background-color: $main-color;
+  display: block;
+  .newtab {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 0;
+    &-title {
+      font-size: 72px;
+      font-weight: 700;
+      color: $color-bl;
+      text-align: center;
+    }
+    &-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 0 10px;
+      display: inline-block;
+    }
+    .wrap_socmed {
+      background-color: $color-wh;
+      padding: 60px;
+      border-radius: 16px;
+      margin: 60px 20px;
+    }
+    &-socmed {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #181818;
+      padding: 10px;
+      color: $color-wh;
+      position: relative;
+      border-radius: 12px;
+      gap: 10px;
+      .xmark {
+        position: absolute;
+        right: 10px;
+        padding-left: 50px;
+        background: linear-gradient(
+          270deg,
+          #181818 53.65%,
+          rgba(24, 24, 24, 0.8) 100%
+        );
+      }
+      & span {
+        overflow: hidden;
+      }
+    }
+  }
+  @include maxw(480px) {
+    .newtab-title {
+      font-size: 32px;
+    }
+    .newtab-img img {
+      display: none;
+    }
+    .newtab-socmed img {
+      display: block;
+    }
+  }
+}
