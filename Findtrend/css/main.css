@@ -480,7 +480,6 @@ a {
   justify-content: center;
   margin: 80px 0;
   gap: 24px;
-  overflow: auto;
 }
 .connect-platform img {
   padding: 32px;
@@ -524,8 +523,8 @@ a {
 }
 @media screen and (max-width: 768px) {
   .connect .connect-platform {
-    overflow: hidden;
     overflow-x: visible;
+    overflow: auto;
     gap: 0;
   }
   .connect .connect-platform img {
@@ -534,7 +533,7 @@ a {
 }
 @media screen and (max-width: 480px) {
   .connect .connect-platform {
-    overflow: hidden;
+    overflow: auto;
     overflow-x: visible;
     gap: 0;
   }
