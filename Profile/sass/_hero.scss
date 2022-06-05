@@ -1,0 +1,104 @@
+.hero {
+  margin-top: 64px;
+  &-wrapper {
+    display: flex;
+    gap: 40px;
+  }
+  &-left {
+    max-width: 600px;
+  }
+  &-right {
+    position: relative;
+  }
+  &-text {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  &-flow {
+    display: flex;
+    gap: 0 36px;
+    align-items: center;
+    & p {
+      color: rgba(34, 34, 34, 0.5);
+      font-size: 18px;
+    }
+    &-img {
+      display: flex;
+      gap: 0 16px;
+    }
+  }
+  &-btn {
+    margin-top: 64px;
+    .btn {
+      padding: 14px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .btn-1 {
+      background-color: #ff2950;
+      color: $text-wh;
+      margin-right: 30px;
+    }
+    .btn-2 {
+      border: 1px solid $main-color;
+      color: rgba(34, 34, 34, 0.5);
+    }
+  }
+  .points2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .points1 {
+    top: 0;
+    right: 0;
+    z-index: -1;
+    position: absolute;
+  }
+  &-headding {
+    font-size: 35px;
+    line-height: 62px;
+    color: $text-bl;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-bottom: 48px;
+  }
+}
+@include maxw(1130px) {
+  .container {
+    max-width: 900px;
+  }
+  .points2 {
+    display: none;
+  }
+  .hero {
+    height: 500px;
+  }
+}
+@include maxw(1024px) {
+  .hero-headding {
+    font-size: 26px;
+  }
+}
+@include maxw(765px) {
+  .avatar {
+    display: none;
+  }
+}
+@include maxw(415px) {
+  body {
+    padding: 0;
+  }
+  .hero-headding {
+    font-size: 23px;
+  }
+  .hero-btn {
+    text-align: center;
+  }
+}
+@include maxw(376px) {
+  .hero-headding {
+    font-size: 20px;
+  }
+}

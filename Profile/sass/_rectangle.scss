@@ -1,0 +1,79 @@
+.rectangle {
+  margin-top: 100px;
+  &-wrapper {
+    background-color: $main-color;
+    border-radius: 35px;
+    padding: 47px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+  }
+  &-text {
+    grid-column: 2/4;
+    &-headding {
+      display: flex;
+      align-items: center;
+      gap: 49px;
+      .probject {
+        :first-child {
+          font-size: 60px;
+          font-weight: 600;
+          color: $text-wh;
+        }
+        :nth-child(2) {
+          font-size: 20px;
+          color: $text-wh;
+        }
+      }
+      .rate {
+        font-size: 20px;
+        color: $text-wh;
+        & img {
+          padding: 32px 0;
+        }
+      }
+    }
+  }
+  &-title {
+    font-size: 45px;
+    line-height: 62px;
+    color: $text-wh;
+    margin: 10px 0;
+  }
+  .text-c {
+    font-size: 24px;
+    color: $text-wh;
+    line-height: 188%;
+  }
+}
+@include maxw(960px) {
+  body {
+    padding: 0;
+  }
+  .wrapper {
+    padding: 0 20px;
+  }
+  .rectangle-title {
+    font-size: 35px;
+  }
+}
+@include maxw(769px) {
+  .rectangle-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .rectangle-text {
+    grid-column: auto;
+  }
+  .rectangle-img img {
+    margin: auto;
+  }
+}
+@include maxw(480px) {
+  .rectangle-title {
+    font-size: 30px;
+  }
+
+  .text-c {
+    font-size: 18px !important;
+  }
+}

@@ -1,0 +1,42 @@
+.interested {
+  margin-top: 125px;
+  &-wrapper {
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 30px;
+    border-radius: 20px;
+    & h2 {
+      font-size: 36px;
+      font-weight: 600;
+      color: $text-wh;
+    }
+    & a {
+      border-radius: 10px;
+      box-shadow: 0px 0.927421px 1.92354px rgba(0, 0, 0, 0.00974257);
+      background: #f9f9f9;
+      color: $text-bl;
+      padding: 13px 40px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+@include maxw(769px) {
+  .interested-wrapper a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .interested-wrapper h2 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+@include maxw(480px) {
+  .interested-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

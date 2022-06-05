@@ -1,0 +1,13 @@
+$main-color: #ff7315;
+$text-bl: #222222;
+$text-wh: #f9f9f9;
+@mixin maxw($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minw($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

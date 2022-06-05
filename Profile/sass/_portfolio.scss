@@ -1,0 +1,50 @@
+.portfolio {
+  margin-top: 125px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & p {
+      font-size: 48px;
+      font-weight: 600;
+    }
+    & a,
+    i {
+      color: rgba(34, 34, 34, 0.5);
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+  &-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-left: 24px;
+  }
+}
+@include maxw(1024px) {
+  .portfolio-img {
+    margin: 0;
+  }
+}
+@include maxw(480px) {
+  .portfolio-header p {
+    font-size: 40px;
+  }
+  .portfolio-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio-header i,
+  .portfolio-header a {
+    font-size: 16px;
+  }
+}
+@include maxw(380px) {
+  .portfolio-header p {
+    font-size: 30px;
+  }
+  .portfolio-header i,
+  .portfolio-header a {
+    font-size: 14px;
+  }
+}
