@@ -1,0 +1,68 @@
+.hero {
+  margin-top: 100px;
+  max-height: 500px;
+  overflow: hidden;
+  &-wrap {
+    @include grid($col: 2);
+    padding-right: 0;
+  }
+  &-cloumn1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    & img {
+      max-width: 100px;
+    }
+    & h3 {
+      font-size: 50px;
+    }
+    .hero-btn {
+      & a {
+        padding: 10px 30px;
+        background-color: $text-black;
+        color: $text-wh;
+        border-radius: 15px;
+        transition: all 0.25s linear;
+        @include hover-btn;
+      }
+    }
+  }
+  &-cloumn2 {
+    & img {
+      margin: auto;
+      height: 550px;
+      width: 60%;
+    }
+  }
+}
+@include maxw(1000px) {
+  .hero-cloumn2 img {
+    width: 70%;
+  }
+  .hero-cloumn1 h3 {
+    font-size: 40px;
+  }
+  .hero {
+    max-height: 440px;
+  }
+}
+@include maxw(768px) {
+  .hero {
+    max-height: 1000px;
+    &-wrap {
+      grid-template-columns: 1fr;
+      gap: 80px;
+      padding-right: 20px;
+    }
+    &-cloumn2 {
+      & img {
+        height: auto;
+        width: auto;
+      }
+    }
+    &-cloumn1 {
+      text-align: center;
+      align-items: center;
+    }
+  }
+}

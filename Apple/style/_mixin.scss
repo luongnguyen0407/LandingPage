@@ -1,0 +1,43 @@
+@mixin btn($roud, $bg: $ori-color) {
+  display: inline-block;
+  background-color: $bg;
+  border-radius: $roud;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+@mixin cost($color) {
+  color: $color;
+  & a {
+    color: white;
+    padding: 10px 32px;
+    background-color: $color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background 0.25s linear;
+    &:hover {
+      @include hover-btn;
+    }
+  }
+}
+
+@mixin grid($col: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  gap: $gap;
+}
+@mixin hover-btn() {
+  &:hover {
+    background-color: #6a5af9;
+  }
+}
+@mixin maxw($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minw($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

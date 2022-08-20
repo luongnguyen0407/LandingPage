@@ -1,0 +1,15 @@
+.footer {
+  background-color: $text-wh;
+  padding: 40px 0;
+  & img {
+    max-width: 100px;
+    margin: auto;
+  }
+  & div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

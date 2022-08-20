@@ -1,0 +1,33 @@
+.section {
+  background-color: #ff5437;
+  &-item {
+    @include grid($col: 3, $gap: 40px);
+    text-align: center;
+    padding: 50px 30px 50px 30px;
+    & h2 {
+      font-size: 80px;
+      color: #ffffff;
+    }
+    & p {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+@include maxw(768px) {
+  .section-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .one-section-item:nth-child(3) {
+    grid-column: 1/3;
+  }
+}
+@include maxw(768px) {
+  .section-item {
+    grid-template-columns: 1fr;
+  }
+  .one-section-item:nth-child(3) {
+    grid-column: auto;
+  }
+}
