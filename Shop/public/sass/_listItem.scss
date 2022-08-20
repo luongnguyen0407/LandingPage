@@ -1,0 +1,83 @@
+.list-item {
+  margin-top: 60px;
+  padding: 0 20px;
+  .item-content {
+    @include grid($cols: 3, $gap: 20px);
+  }
+  .common {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title-n {
+      text-transform: capitalize;
+      font-size: 2rem;
+    }
+    .one-sp {
+      overflow: hidden;
+      display: flex;
+      //   gap: 15px;
+      align-items: center;
+      img {
+        max-width: 120px;
+        object-fit: cover;
+      }
+      .sp-cost {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        p {
+          font-size: 1.8rem;
+          color: $blue-color;
+          font-weight: 600;
+        }
+        del {
+          color: #ccc;
+          font-size: 1.4rem;
+        }
+      }
+      .text-sp {
+        line-height: 2;
+        border: 1px solid #ccc;
+        flex: 1;
+        height: 100%;
+        padding: 0 10px;
+        h3 {
+          margin-top: 10px;
+          font-size: 1.8rem;
+          font-weight: 600;
+          transition: color 0.25s linear;
+          cursor: pointer;
+          text-transform: capitalize;
+          &:hover {
+            color: $blue-color;
+          }
+        }
+      }
+      .buyNow {
+        text-decoration: none;
+        color: black;
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: "";
+          width: 0;
+          height: 2px;
+          transition: all 0.25s linear;
+          background-color: currentColor;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include maxw(980px) {
+  .list-item .item-content {
+    grid-template-columns: 1fr;
+  }
+}

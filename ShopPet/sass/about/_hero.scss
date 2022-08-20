@@ -1,0 +1,41 @@
+.wrapper-about {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.about-hero {
+  position: relative;
+  & img {
+    height: 300px;
+    width: 100%;
+    // object-fit: cover;
+  }
+  .hero-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 62%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-content {
+      text-align: center;
+      & h3 {
+        color: $wh-color !important;
+        font-size: 50px;
+        font-weight: 600;
+      }
+      & a,
+      span {
+        color: $text-dark;
+      }
+    }
+  }
+}
+@include maxw(960px) {
+  .about-hero img {
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,104 @@
+.expert-home {
+  margin-top: 140px;
+  padding: 0 20px;
+  .expert {
+    &-header {
+      & h3 {
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+        max-width: 700px;
+        margin: 20px auto;
+      }
+    }
+    &-hedding {
+      display: flex;
+      gap: 0 10px;
+      justify-content: center;
+      color: $ori-color;
+    }
+    &-wrapper-item {
+      @include grid($col: 3);
+      cursor: pointer;
+      margin-top: 40px;
+      :hover .expert-day {
+        color: #58a6bb;
+      }
+      .wrap-img {
+        position: relative;
+        margin-bottom: 40px;
+      }
+      .ex-inbg {
+        border-radius: 100rem;
+        padding: 5px;
+        background-color: white;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ex-bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        height: 350px;
+        z-index: -1;
+      }
+      .fa-whatsapp {
+        position: absolute;
+        bottom: -10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 12px;
+        border-radius: 100rem;
+        background-color: white;
+        font-size: 18px;
+      }
+      .expert-name {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .expert-day {
+        color: $ori-color;
+        text-align: center;
+        transition: color 0.25s linear;
+      }
+    }
+  }
+}
+@include maxw(1024px) {
+  .expert-home .expert-wrapper-item .ex-inbg {
+    width: 250px;
+    height: 250px;
+  }
+}
+@include maxw(870px) {
+  .expert-wrapper-item {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 0 !important;
+  }
+  .expert-item {
+    width: 49%;
+  }
+}
+@include maxw(740px) {
+  .expert-wrapper-item {
+    gap: 70px 0 !important;
+  }
+  .expert-item {
+    width: 100%;
+  }
+}
+@include maxw(469px) {
+  .expert-home .expert-header h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+}

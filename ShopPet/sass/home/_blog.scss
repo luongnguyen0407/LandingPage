@@ -1,0 +1,97 @@
+.blog-home {
+  .blog {
+    padding: 0 20px;
+    &-item {
+      overflow: hidden;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      & img {
+        flex-shrink: 0;
+      }
+    }
+    &-item-wrapper {
+      @include grid($col: 3, $gap: 20px);
+      margin-top: 30px;
+    }
+    &-headding {
+      display: flex;
+      color: $ori-color;
+      gap: 10px;
+    }
+    & h3 {
+      font-size: 40px;
+      font-weight: 600;
+      margin: 20px 0;
+      max-width: 600px;
+    }
+    &-item-comment {
+      display: flex;
+      gap: 0 10px;
+      section {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        & i {
+          color: #4fa9bc;
+        }
+        p {
+          font-size: 14px;
+          color: $text-dark;
+        }
+      }
+    }
+    .item-title {
+      font-size: 23px;
+    }
+    .item-text {
+      padding: 20px;
+      flex: 1;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    &-btn {
+      @include btn($roud: 100rem, $bg: #faf6f1);
+      padding: 10px 10px;
+      color: $text-dark;
+      width: 50%;
+      margin: 0 auto 20px auto;
+      transition: all 0.25s linear;
+      &:hover {
+        background-color: $ori-color;
+        color: $wh-color;
+      }
+    }
+  }
+}
+@include maxw(900px) {
+  .blog-item-wrapper {
+    display: flex !important;
+    gap: 20px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blog-home .blog-item {
+    width: 48%;
+    height: auto;
+  }
+  .item-text .item-title {
+    font-size: 30px !important;
+  }
+}
+@include maxw(769px) {
+  .blog-home .blog-item {
+    width: 100%;
+  }
+}
+@include maxw(480px) {
+  .item-text .item-title {
+    font-size: 20px !important;
+  }
+  .blog-home .blog h3 {
+    font-size: 30px;
+  }
+}

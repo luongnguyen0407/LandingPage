@@ -1,0 +1,34 @@
+@import "reset";
+@import "mixin";
+@import "variables";
+@import "global";
+@import "header";
+@import "footer";
+
+//home
+@import "./home/hero";
+@import "./home/sevices";
+@import "./home/funfacts";
+@import "./home/about";
+@import "./home/slider";
+@import "./home/company";
+@import "./home/testimonial";
+@import "./home/expert";
+@import "./home/book";
+@import "./home/blog";
+
+//about
+@import "./about/hero";
+@import "./about/wonzor";
+@import "./about/funfacts";
+@import "./about/library";
+@import "./about/why";
+
+//product
+@import "./product/sanpham";
+//cart
+@import "./cart/cart";
+
+// contact
+@import "./contact/content";
+@import "./contact/mapAndFooter";

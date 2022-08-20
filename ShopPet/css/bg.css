@@ -1,0 +1,25 @@
+.footer {
+  background-image: url(../img/imghome/bg-footer.png);
+}
+.bg-top {
+  background-image: url(../img/imghome/hero.png);
+}
+.book-form {
+  background-image: url(../img/imghome/bg-form.png);
+}
+.company-home {
+  background-image: url(../img/imghome/base.jpg);
+}
+.wrapper-about {
+  background-image: url(../img/imgabout/bg.jpg);
+}
+.about-library-column1 {
+  background-image: url(../img/imgabout/Shape1.png);
+}
+.contact-content {
+  background-image: url(../img/imgproduct/bg-header.png);
+}
+
+.wrapper-contact .contact-map .infor-wrap {
+  background: url(../img/imgproduct/bg-ab.jpg);
+}

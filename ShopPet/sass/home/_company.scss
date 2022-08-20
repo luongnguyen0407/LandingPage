@@ -1,0 +1,66 @@
+.company-home {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  & h4 {
+    font-weight: 500;
+    font-size: 20px;
+    padding-top: 40px;
+    display: block;
+  }
+  .company {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      & img {
+        width: 100px;
+        opacity: 0.5;
+        transition: opacity 0.25s linear;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@include maxw(1025px) {
+  .company-home {
+    margin-top: 40px;
+  }
+  .company-home .company {
+    max-width: 95%;
+  }
+}
+@include maxw(769px) {
+  .company-home {
+    background-size: 150%;
+  }
+}
+@include maxw(640px) {
+  .company-home .company-item img {
+    width: 30%;
+  }
+  .company-item {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 20px;
+  }
+  .company-home {
+    background-size: 180%;
+  }
+}
+@include maxw(480px) {
+  .company-home {
+    background-size: 260%;
+  }
+  .company-item {
+    gap: 30px;
+  }
+}

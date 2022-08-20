@@ -1,0 +1,42 @@
+@mixin btn($roud, $bg: $ori-color) {
+  display: inline-block;
+  background-color: $bg;
+  border-radius: $roud;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 0.2s linear;
+  &:hover {
+    transform: rotateY(-15deg);
+  }
+}
+@mixin control {
+  cursor: pointer;
+  padding: 15px;
+  background-color: $wh-color;
+  border-radius: 100rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: $text-dark;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  z-index: 10;
+}
+@mixin grid($col: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  gap: $gap;
+}
+@mixin maxw($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minw($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

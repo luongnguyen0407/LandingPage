@@ -1,0 +1,61 @@
+.home-hero {
+  padding: 0 30px;
+  .hero-main {
+    max-width: 50%;
+  }
+  &-headding {
+    font-size: 75px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    pointer-events: none;
+  }
+  .hero-content {
+    font-size: 16px;
+    color: $text-dark;
+  }
+  .hero-btn-wrapper {
+    position: relative;
+    margin-top: 30px;
+    display: inline-block;
+    & img {
+      position: absolute;
+      height: 60px;
+      right: -30%;
+      top: 30%;
+      transform: translateY(-68%) rotate(13deg);
+    }
+  }
+  .hero-btn {
+    @include btn($roud: 100rem);
+    padding: 12px 32px;
+    color: $wh-color;
+  }
+}
+@include maxw(1025px) {
+  .home-hero-headding {
+    font-size: 60px;
+  }
+}
+@include maxw(880px) {
+  .home-hero-headding {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+}
+@include maxw(769px) {
+  .hero-main {
+    max-width: 100% !important;
+  }
+  .hero-content {
+    color: $text-color !important;
+  }
+  .bg-top {
+    opacity: 0.6;
+  }
+}
+@include maxw(380px) {
+  .home-hero-headding {
+    font-size: 45px;
+  }
+}

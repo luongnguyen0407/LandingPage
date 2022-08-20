@@ -1,0 +1,99 @@
+.about-home {
+  margin-top: 140px;
+  .about {
+    @include grid($col: 2, $gap: 80px);
+    &-wondor {
+      padding-right: 20px;
+      &-header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: $ori-color;
+      }
+      &-headding {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      &-content {
+        font-size: 14px;
+        color: $text-dark;
+        margin: 20px 0;
+      }
+      &-mess {
+        background-color: #faf6f1;
+        border-radius: 100rem;
+        padding: 20px 30px;
+        display: block;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          border: 24px solid;
+          border-color: #faf6f1 transparent transparent transparent;
+          bottom: -50%;
+          left: 5%;
+        }
+      }
+    }
+    &-item {
+      @include grid($col: 2, $gap: 30px);
+      margin-top: 30px;
+      &-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & i {
+          font-size: 12px;
+          padding: 3px 4px;
+          background-color: $bl-color;
+          border-radius: 100rem;
+          color: $wh-color;
+        }
+      }
+      & p {
+        font-size: 14px;
+        color: $text-dark;
+        margin-top: 20px;
+      }
+    }
+    &-btn {
+      @include btn($roud: 100rem);
+      padding: 10px 32px;
+      margin-top: 30px;
+    }
+  }
+}
+@include maxw(1000px) {
+  .about-home .about-wondor-mess::after {
+    display: none;
+  }
+  .about {
+    align-items: center;
+  }
+}
+@include maxw(870px) {
+  .about-home .about-item {
+    display: block;
+  }
+}
+@include maxw(768px) {
+  .about-home .about-item {
+    display: block;
+  }
+  .about-home .about-item-header {
+    justify-content: center;
+  }
+  .about-home .about {
+    display: block;
+  }
+  .about-home .about-wondor {
+    text-align: center;
+  }
+  .about-home .about-item p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .about-home .about-wondor {
+    padding: 0 20px;
+  }
+}

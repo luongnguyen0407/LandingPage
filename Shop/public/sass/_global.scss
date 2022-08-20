@@ -1,0 +1,40 @@
+.container2,
+.container {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container2 {
+  overflow: hidden;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  animation: fade 0.3s forwards 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.show {
+  display: block !important;
+}
+.ti-heart.active {
+  color: red;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,109 @@
+.home-sevices {
+  margin-top: 140px;
+  .sevices {
+    padding: 0 20px;
+    &-header {
+      display: flex;
+      gap: 10px;
+      color: $ori-color;
+      font-size: 18px;
+      justify-content: center;
+    }
+    &-headding {
+      font-size: 50px;
+      max-width: 80%;
+      text-align: center;
+      display: block;
+      margin: 24px auto;
+      font-weight: 600;
+    }
+    &-wrapper-item {
+      @include grid($col: 4, $gap: 30px);
+      padding-bottom: 140px;
+    }
+    &-item {
+      padding: 14px;
+      border-radius: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      position: relative;
+      margin-top: 200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      transition: all 0.25s ease-in-out;
+      border-bottom: 2px solid transparent;
+
+      &:hover .btn-readmore {
+        opacity: 1;
+        transition: background 0.3s ease-in;
+        background-color: $bl-color;
+        color: $wh-color;
+      }
+      &:hover {
+        border-bottom: 2px solid $bl-color;
+        cursor: pointer;
+      }
+      .item-img {
+        transform: translateY(-50%);
+        position: relative;
+        .img-icon {
+          position: absolute;
+          bottom: 0;
+          right: 10%;
+          background-color: $ori-color;
+          height: 47px;
+          width: 50px;
+          padding: 10px 15px;
+          border-radius: 100rem;
+          object-fit: cover;
+        }
+        & img {
+          border-radius: 100rem;
+          overflow: hidden;
+          margin: auto;
+          object-fit: cover;
+        }
+      }
+      &-title {
+        transform: translateY(-50px);
+        font-size: 25px;
+        font-weight: 500;
+      }
+      &-content {
+        flex: 1;
+        color: $text-dark;
+        margin-bottom: 30px;
+      }
+      .btn-readmore {
+        @include btn($roud: 100rem, $bg: transparent);
+        position: absolute;
+        bottom: -20px;
+        padding: 10px 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        transition: opacity 0.15s linear;
+        color: transparent;
+      }
+    }
+  }
+}
+@include maxw(1025px) {
+  .home-sevices .sevices-item .btn-readmore {
+    width: 80%;
+  }
+}
+@include maxw(920px) {
+  .sevices-wrapper-item {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@include maxw(480px) {
+  .sevices-wrapper-item {
+    grid-template-columns: 1fr !important;
+  }
+  .sevices-headding {
+    font-size: 30px !important;
+  }
+}

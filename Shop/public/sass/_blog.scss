@@ -1,0 +1,58 @@
+.blog {
+  margin-top: 70px;
+  background-color: #f6f9fc;
+  padding: 50px 20px;
+  &-heading {
+    text-align: center;
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+  &-content {
+    @include grid($cols: 3, $gap: 20px);
+    margin-top: 60px;
+    user-select: none;
+  }
+  &-item {
+    position: relative;
+    overflow: hidden;
+    &:hover img {
+      transform: scale(1.05);
+    }
+    img {
+      max-width: 100%;
+      transition: all 0.25s ease;
+    }
+    .blog-day {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 8px 20px;
+      text-align: center;
+      background-color: white;
+      h3 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+    .blog-text {
+      text-align: center;
+      position: relative;
+      width: 80%;
+      padding: 20px;
+      display: block;
+      margin: auto;
+      background-color: white;
+      margin-top: -4rem;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+}
+@include maxw(980px) {
+  .blog-content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.slider {
+  margin-top: 125px;
+  padding: 48px;
+  .active {
+    background-color: $ori-color;
+  }
+  &-wrapper {
+    position: relative;
+  }
+  &-prev {
+    left: -15px;
+    @include control;
+  }
+  &-next {
+    right: -15px;
+    @include control;
+  }
+  &-headding {
+    line-height: 60px;
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    cursor: pointer;
+  }
+  &-dots {
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-main {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.4s linear;
+    margin: 50px 0;
+    padding-right: 30px;
+  }
+  &-dot-item {
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    background-color: #999;
+    cursor: pointer;
+    transition: background-color 0.25s linear;
+  }
+  &-item {
+    background-color: white;
+    border-radius: 30px;
+    flex: 3 0 33%;
+    display: flex;
+    overflow: hidden;
+    max-height: 300px;
+    & img {
+      object-fit: cover;
+    }
+    &-wrapper {
+      overflow: hidden;
+    }
+  }
+}
+@include maxw(1024px) {
+  .slider {
+    display: none;
+  }
+}

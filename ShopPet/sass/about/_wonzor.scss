@@ -1,0 +1,65 @@
+.about-wonzor {
+  .wrapper-wonzor {
+    margin-top: 40px;
+    padding: 0 20px;
+    &-content {
+      @include grid($col: 2, $gap: 10px);
+      &-column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        & h4 {
+          font-size: 50px;
+          font-weight: 600;
+        }
+        & :nth-child(3) {
+          font-size: 14px;
+          color: $text-dark;
+        }
+        & a {
+          @include btn($roud: 100rem, $bg: $ori-color);
+          padding: 10px 30px;
+          width: 40%;
+        }
+      }
+      &-column2 {
+        & img {
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  &-header {
+    display: flex;
+    gap: 0 10px;
+    color: $ori-color;
+  }
+}
+@include maxw(960px) {
+  .about-wonzor .wrapper-wonzor-content-column1 h4 {
+    font-size: 35px;
+  }
+  .about-wonzor .wrapper-wonzor-content-column1 a {
+    width: 60%;
+    margin: auto;
+  }
+}
+@include maxw(750px) {
+  .about-library {
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+  .about-library-column1,
+  .about-library-column2 {
+    width: 100% !important;
+  }
+}
+@include maxw(670px) {
+  .about-wonzor .wrapper-wonzor-content {
+    grid-template-columns: 1fr;
+  }
+  .wrapper-wonzor-content-column2 {
+    margin-top: 30px;
+    grid-row: 1/2;
+  }
+}

@@ -1,0 +1,47 @@
+.slider2 {
+  margin: 0 20px;
+  overflow: hidden;
+  &:hover .swiper-prev-02,
+  &:hover .swiper-next-02 {
+    opacity: 1;
+  }
+
+  .swiper2 {
+    width: 100%;
+  }
+  .container2 {
+    position: relative !important;
+  }
+  .swiper-next-02 {
+    right: 5px;
+  }
+  .swiper-prev-02 {
+    left: 5px;
+  }
+  .swiper-prev-02,
+  .swiper-next-02 {
+    transition: all linear 0.25s;
+    opacity: 0;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.594);
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    z-index: 10;
+    color: white;
+    cursor: pointer;
+    border-radius: 100rem;
+  }
+  .swiper-pagination2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@include maxw(480px) {
+  .latest-item .item-img .icon-ab i {
+    padding: 9px;
+  }
+}

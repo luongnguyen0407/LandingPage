@@ -1,0 +1,63 @@
+.coundow {
+  background-image: url(../img/shop-banner-36.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  margin-top: 50px;
+  position: relative;
+  .wrap-coundow {
+    padding: 0 20px;
+  }
+  .clock {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+  .time {
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    .number-days,
+    .number-hrs,
+    .number-min,
+    .number-sec {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $blue-color;
+    }
+  }
+  .show-now {
+    padding: 10px 20px;
+    background-color: $blue-color;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+@include maxw(768px) {
+  .coundow .clock {
+    width: 80%;
+    margin: auto;
+  }
+  .wrap-coundow {
+    display: flex;
+    justify-content: center;
+  }
+}

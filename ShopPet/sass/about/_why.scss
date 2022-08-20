@@ -1,0 +1,133 @@
+.why {
+  margin-top: 100px;
+  height: 500px;
+  &-wrapper {
+    @include grid($col: 2);
+    padding: 0 20px;
+  }
+  &-avatar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    & img {
+      width: 150px;
+      height: 150px;
+      border-radius: 100rem;
+      object-fit: cover;
+    }
+  }
+  &-col-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    .rag {
+      width: 90%;
+      margin: auto;
+      background-color: #ccc;
+      border-radius: 100rem;
+      height: 5px;
+      & span {
+        position: relative;
+        width: 68%;
+        background-color: #7ac143;
+        height: 100%;
+        display: block;
+        border-radius: 100rem;
+        & p {
+          position: absolute;
+          top: -20px;
+          right: -16px;
+          color: $text-dark;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &-check {
+    line-height: 35px;
+    & p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: $text-dark;
+    }
+    & i {
+      color: #ffdd9f;
+    }
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  &-col-2 {
+    margin-top: 60px;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    .accordion {
+      margin-bottom: 15px;
+      max-width: 500px;
+    }
+    .accordion-header {
+      padding: 20px;
+      border-radius: 4px 4px 0 0;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accordion-header * {
+      pointer-events: none;
+    }
+    .accordion-content {
+      border-top: 0;
+      color: #333;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+      background-color: white;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.25s linear;
+      border-radius: 0 0 4px 4px;
+    }
+    .accordion-content-inner {
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+    .accordion-content.is-active {
+      height: auto;
+    }
+  }
+}
+.company-about {
+  margin-top: 80px;
+}
+@include maxw(1000px) {
+  .why-wrapper {
+    @include grid($col: 1);
+  }
+  .why {
+    height: auto;
+    text-align: center;
+    &-col-2 {
+      align-items: center;
+    }
+  }
+  .why-avatar {
+    justify-content: center;
+  }
+  .accordion {
+    max-width: 80% !important;
+  }
+}
+@include maxw(550px) {
+  .why-avatar {
+    flex-direction: column;
+  }
+  .-title {
+    font-size: 35px;
+  }
+}

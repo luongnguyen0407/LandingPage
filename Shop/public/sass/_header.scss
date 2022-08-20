@@ -1,0 +1,121 @@
+.header {
+  background-color: white;
+  &-main {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+}
+.nav-main {
+  list-style: none;
+  gap: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.25s linear;
+    &:hover {
+      color: $blue-color;
+    }
+  }
+  .nav-item:nth-child(2) {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    cursor: pointer;
+    &:hover .nav-link,
+    &:hover .ti-angle-down {
+      color: $blue-color;
+      pointer-events: none;
+    }
+
+    i {
+      font-size: 1.4rem;
+      transition: color 0.25s linear;
+    }
+    .drop-dow {
+      position: absolute;
+      z-index: 100;
+      height: 0;
+      overflow: hidden;
+      background-color: white;
+      list-style: none;
+      top: 40px;
+      border-radius: 10px;
+      line-height: 2;
+      padding: 0 20px;
+      width: 200px;
+      transition: height 0.25s linear;
+      li {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        pointer-events: none;
+      }
+      a {
+        width: 100%;
+      }
+    }
+    .show-child {
+      transition: height 0.25s linear;
+      padding: 20px;
+      padding-top: 0px;
+      height: auto;
+    }
+  }
+}
+.wrap-logo {
+  padding-right: 20px;
+  img {
+    margin: auto;
+  }
+}
+.wrap-icon {
+  gap: 30px;
+  margin-left: 20px;
+  .ti-menu {
+    display: none;
+    font-size: 1.8rem;
+  }
+  i {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.25s linear;
+    &:hover {
+      color: $blue-color;
+    }
+  }
+}
+
+@include maxw(769px) {
+  .ti-menu {
+    display: block !important;
+  }
+  .wrap-logo {
+    flex: none;
+  }
+  .wrap-logo {
+    padding-right: 5px !important;
+  }
+  .nav-main {
+    position: absolute;
+    background: whitesmoke;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 30px;
+    transition: transform 0.25s linear;
+  }
+  .nav-show {
+    transform: translateX(0%);
+    z-index: 9999;
+  }
+}
